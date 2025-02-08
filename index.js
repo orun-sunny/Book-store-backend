@@ -10,7 +10,7 @@ const port = process.env.PORT || 5000
 
 app.use(express.json());
 app.use(cors({
-    origin: ["http://localhost:5173"],
+    origin: ["http://localhost:5173", "https://book-store-client-side-five.vercel.app"],
     credentials: true,
 }));
 
@@ -45,5 +45,5 @@ async function main() {
 main().then(() => console.log("Mongodb connect succesfully")).catch(err => console.log(err));
 
 app.listen(port, () => {
-    console.log(`Server is running on port " ${port}`);
+    console.log(` Book Server is running on port " ${port}`);
 })
